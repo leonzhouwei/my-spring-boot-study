@@ -1,6 +1,10 @@
 package hello.dto;
 
-public class Greeting {
+import java.io.Serializable;
+
+public class Greeting implements Serializable {
+
+    private static final long serialVersionUID = -1183808557368451342L;
 
     private final long id;
     private final String content;
@@ -18,4 +22,11 @@ public class Greeting {
         return content;
     }
 
+    @Override
+    public String toString() {
+        return "Greeting{" +
+                "id=" + id +
+                ", content='" + content + '\'' +
+                '}';
+    }
 }
